@@ -1,0 +1,19 @@
+# Archivos compilados de Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+# Configuraciones de editores (VS Code, IntelliJ, Eclipse)
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Logs y otros
+*.log
+*.class
+*.jar
