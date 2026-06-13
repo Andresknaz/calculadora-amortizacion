@@ -2,13 +2,19 @@ package com.jaimeisaza.laboratorio;
 
 public class CalculadoraAmortizacion {
 
-    // Vulnerabilidad grave: Contraseña quemada en el código (SonarQube lo odia)
+    // Vulnerabilidad vieja
     private static final String CLAVE_BD = "admin12345";
+
+    // 🚨 NUEVA VULNERABILIDAD: Token de API quemado
+    private static final String TOKEN_API = "ak_live_123456789_secreto";
 
     public double calcularCuota(double capital, double tasaInteres, int meses) {
 
-        // Bug crítico: Provocará un error de ejecución garantizado
-        // (NullPointerException)
+        // 🚨 NUEVO BUG: División por cero
+        int divisor = 0;
+        int calculoRoto = 100 / divisor;
+
+        // Bug viejo
         String textoNulo = null;
         if (textoNulo.equals("prueba")) {
             System.out.println("Esto nunca se ejecutará, pero rompe Sonar");
